@@ -17,7 +17,7 @@
         #landis-setup {
             color: #333; /* Jeszcze ciemniejszy szary dla nagÅÃ³wka "Landi's Set Up" */
             margin-top: 0; /* Eliminacja domyÅlnego marginesu gÃ³rnego */
-            font-size: 24px; /* Mniejsza czcionka dla nagÅÃ³wka "Landi's Set Up" */
+            font-size: 20px; /* Mniejsza czcionka dla nagÅÃ³wka "Landi's Set Up" */
         }
         ul {
             list-style-type: none;
@@ -30,12 +30,11 @@
         strong {
             font-weight: bold;
         }
-        a {
-            color: #000; /* Czarny kolor dla linkÃ³w */
-            text-decoration: none; /* UsuniÄcie podkreÅlenia */
+        .equipment {
+            color: #000; /* Czarny kolor dla nazw CPU, GPU i pamiÄci */
         }
-        a:hover {
-            text-decoration: underline; /* PodkreÅlenie linku po najechaniu myszkÄ */
+        .equipment:hover {
+            text-decoration: underline; /* PodkreÅlenie nazw CPU, GPU i pamiÄci po najechaniu myszkÄ */
         }
     </style>
 </head>
@@ -54,9 +53,9 @@
 
     <h3>My PC:</h3>
     <ul>
-        <li><strong>CPU:</strong> Intel Core i5-11400F</li>
-        <li><strong>GPU:</strong> NVIDIA GeForce RTX 3060</li>
-        <li><strong>Memory:</strong> DDR4 32 GB</li>
+        <li><strong>CPU:</strong> <span class="equipment">Intel Core i5-11400F</span></li>
+        <li><strong>GPU:</strong> <span class="equipment">NVIDIA GeForce RTX 3060</span></li>
+        <li><strong>Memory:</strong> <span class="equipment">DDR4 32 GB</span></li>
     </ul>
 </body>
 </html>
