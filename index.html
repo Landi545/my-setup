@@ -12,15 +12,16 @@
         }
         #container {
             padding: 20px;
-            background-color: #b5b5b5; /* Bardziej szary odcieÅ tÅa */
+            background-color: #b5b5b5; /* Bardziej szary odcień tła */
+            overflow: hidden; /* Naprawia problem z długim białym obszarem na dole strony */
         }
         h2, h3 {
-            color: #333; /* Lekko jaÅniejszy czarny dla nagÅÃ³wkÃ³w */
+            color: #333; /* Lekko jaśniejszy czarny dla nagłówków */
         }
         #landis-setup {
-            color: #222; /* Jeszcze ciemniejszy czarny dla nagÅÃ³wka "Landi's Set Up" */
-            margin-top: 0; /* Eliminacja domyÅlnego marginesu gÃ³rnego */
-            font-size: 20px; /* Mniejsza czcionka dla nagÅÃ³wka "Landi's Set Up" */
+            color: #222; /* Jeszcze ciemniejszy czarny dla nagłówka "Landi's Set Up" */
+            margin-top: 0; /* Eliminacja domyślnego marginesu górnego */
+            font-size: 20px; /* Mniejsza czcionka dla nagłówka "Landi's Set Up" */
         }
         ul {
             list-style-type: none;
@@ -28,17 +29,23 @@
         }
         li {
             margin-bottom: 10px;
-            color: #111; /* Lekko jaÅniejszy czarny dla pozycji listy */
+            color: #111; /* Lekko jaśniejszy czarny dla pozycji listy */
         }
         strong {
             font-weight: bold;
         }
         .equipment {
-            color: #111; /* Lekko jaÅniejszy czarny dla nazw CPU, GPU i pamiÄci */
-            text-decoration: none; /* UsuniÄcie podkreÅlenia */
+            color: #111; /* Lekko jaśniejszy czarny dla nazw CPU, GPU i pamięci */
+            text-decoration: none; /* Usunięcie podkreślenia */
         }
         .equipment:hover {
-            text-decoration: underline; /* PodkreÅlenie nazw CPU, GPU i pamiÄci po najechaniu myszkÄ */
+            text-decoration: underline; /* Podkreślenie nazw CPU, GPU i pamięci po najechaniu myszką */
+        }
+        footer {
+            background-color: #b5b5b5; /* Kolor tła stopki */
+            padding: 10px 20px; /* Padding stopki */
+            color: #333; /* Kolor tekstu stopki */
+            text-align: center; /* Wyśrodkowanie tekstu w stopce */
         }
     </style>
 </head>
@@ -63,5 +70,6 @@
             <li><strong>Memory:</strong> <span class="equipment">DDR4 32 GB</span></li>
         </ul>
     </div>
+    <footer>Copyright &copy; 2024 Landi</footer>
 </body>
 </html>
