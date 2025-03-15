@@ -9,17 +9,18 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #3b2f2f; /* Ziemiste tło */
-            color: #f4eae0; /* Jasny tekst */
+            background-color: #3b2f2f;
+            color: #f4eae0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             flex-direction: column;
             overflow-x: hidden;
+            transition: background 0.5s ease;
         }
         .container {
-            background: #5c4a4a;
+            background: linear-gradient(135deg, #5c4a4a, #7a5b8c);
             padding: 20px;
             border-radius: 12px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -73,21 +74,19 @@
     <div class="container">
         <h2>Landi's Gaming Setup</h2>
         <ul class="equipment">
-            <li onclick="alert('Logitech G Pro X Superlight 2')">Mouse: Logitech G Pro X Superlight 2</li>
-            <li onclick="alert('Aqua Control 2')">Mouse Pad: Aqua Control 2</li>
-            <li onclick="alert('Apex 9 Mini')">Keyboard: Apex 9 Mini</li>
-            <li onclick="alert('Wooting UwU RGB Stealth')">Keypad: Wooting UwU RGB Stealth</li>
-            <li onclick="alert('Arctic Nova 3')">Headset: Arctic Nova 3</li>
-            <li onclick="alert('Elgato Wave:3')">Microphone: Elgato Wave:3</li>
-            <li onclick="alert('XP-PEN Star G640')">Graphic Tablet: XP-PEN Star G640</li>
-            <li onclick="alert('Acer XB253Q (240Hz)')">Monitor: Acer XB253Q (240Hz)</li>
+            <li onclick="redirectTo('https://amzn.eu/d/4roqWZX')">Mouse: Logitech G Pro X Superlight 2</li>
+            <li onclick="redirectTo('https://amzn.eu/d/5lnyNnC')">Mouse Pad: Aqua Control 2</li>
+            <li onclick="redirectTo('https://amzn.eu/d/cUWgPxc')">Keyboard: Apex 9 Mini</li>
+            <li onclick="redirectTo('https://wooting.io/configurator/wooting-uwu?model=RGB+Stealth&quantity=1&addon=none')">Keypad: Wooting UwU RGB Stealth</li>
+            <li onclick="redirectTo('https://amzn.eu/d/aHkT6NB')">Headset: Arctic Nova 3</li>
+            <li onclick="redirectTo('https://amzn.eu/d/gH2TDXs')">Microphone: Elgato Wave:3</li>
+            <li onclick="redirectTo('https://www.xp-pen.com/product/star-g640.html')">Graphic Tablet: XP-PEN Star G640</li>
+            <li onclick="redirectTo('https://www.x-kom.pl/p/553926-monitor-led-24-acer-predator-xb253qgxbmiiprzx-czarny-hdr.html')">Monitor: Acer XB253Q (240Hz)</li>
         </ul>
-        <button class="button" onclick="changeColor()">Change Theme</button>
     </div>
-
     <script>
-        function changeColor() {
-            document.body.style.backgroundColor = document.body.style.backgroundColor === '#3b2f2f' ? '#4a3b3b' : '#3b2f2f';
+        function redirectTo(url) {
+            window.open(url, '_blank');
         }
     </script>
 </body>
