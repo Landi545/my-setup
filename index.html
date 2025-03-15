@@ -3,83 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Gaming Equipment</title>
+    <title>Landi's Gaming Setup</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #000; /* Czarne tło */
-            color: #fff; /* Biały kolor tekstu */
-            line-height: 1.5; /* Wielkość linii */
+            background-color: #3b2f2f; /* Ziemiste tło */
+            color: #f4eae0; /* Jasny tekst */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            overflow-x: hidden;
         }
-        #container {
+        .container {
+            background: #5c4a4a;
             padding: 20px;
-            background-color: #222; /* Lekko jaśniejsze czarne tło dla kontenera */
+            border-radius: 12px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeIn 1s forwards;
         }
-        h2, h3 {
-            color: #ccc; /* Szary kolor dla nagłówków */
-        }
-        #landis-setup {
-            color: #ddd; /* Jeszcze jaśniejszy szary kolor dla nagłówka "Landi's Set Up" */
-            margin-top: 0; /* Eliminacja domyślnego marginesu górnego */
-            font-size: 24px; /* Rozmiar czcionki dla nagłówka "Landi's Set Up" */
-        }
-        #additional-info {
-            color: #ddd; /* Kolor tekstu dla dodatkowych informacji */
-            font-size: 14px; /* Mniejsza czcionka dla dodatkowych informacji */
-            margin-top: -10px; /* Mniejszy margines górny dla dodatkowych informacji */
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin-bottom: 10px;
-            color: #eee; /* Kolor tekstu dla pozycji listy */
-        }
-        strong {
-            font-weight: bold;
+        h2 {
+            color: #e0d2c1;
         }
         .equipment {
-            color: #eee; /* Kolor tekstu dla nazw CPU, GPU i pamięci */
-            text-decoration: none; /* Usunięcie podkreślenia */
+            list-style: none;
+            padding: 0;
         }
-        .equipment:hover {
-            text-decoration: underline; /* Podkreślenie nazw CPU, GPU i pamięci po najechaniu myszką */
+        .equipment li {
+            padding: 10px;
+            background: #75625a;
+            margin: 8px 0;
+            border-radius: 8px;
+            transition: transform 0.3s ease, background 0.3s ease;
+            cursor: pointer;
         }
-        footer {
-            background-color: #222; /* Kolor tła stopki */
-            padding: 10px 20px; /* Padding stopki */
-            color: #ccc; /* Kolor tekstu stopki */
-            text-align: center; /* Wyśrodkowanie tekstu w stopce */
+        .equipment li:hover {
+            background: #8d7467;
+            transform: scale(1.05);
+        }
+        .button {
+            background: #a38f85;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        .button:hover {
+            background: #b39b91;
+            transform: scale(1.1);
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
 <body>
-    <div id="container">
-        <h2 id="landis-setup">Landi's Set Up</h2>
-        <h3>My Gaming Equipment:</h3>
-        <p id="additional-info">Click on the names to see more details</p>
-        <ul>
-            <li>     <strong>Mouse:</strong> <a href="https://amzn.eu/d/4roqWZX" class="equipment">Logitech G Pro X Superlight 2</a></li>
-            <li>     <strong>Mouse pad:</strong> <a href="https://amzn.eu/d/5lnyNnC" class="equipment">Aqua Control 2</a></li>
-            <li>     <strong>Keyboard:</strong> <a href="https://amzn.eu/d/cUWgPxc" class="equipment">Apex 9 Mini</a></li>
-            <li>     <strong>Keypad:</strong> <a href="https://wooting.io/configurator/wooting-uwu?model=RGB+Stealth&quantity=1&addon=none" class="equipment">Wooting UwU RGB Stealth</a></li>
-            <li>     <strong>Headset:</strong> <a href="https://amzn.eu/d/aHkT6NB" class="equipment">Arctic Nova 3</a></li>
-            <li>     <strong>Microphone:</strong> <a href="https://amzn.eu/d/gH2TDXs" class="equipment">Elgato Wave:3</a></li>
-            <li>     <strong>Mouse bungee:</strong> <a href="https://amzn.eu/d/55HObNM" class="equipment">Razer Mouse Bungee V3 Chroma</a></li>
-            <li>     <strong>Graphic tablet:</strong> <a href="https://www.xp-pen.com/product/star-g640.html" class="equipment">XP-PEN Star G640</a></li>
-            <li>     <strong>Monitors:</strong> <a href="https://www.x-kom.pl/p/553926-monitor-led-24-acer-predator-xb253qgxbmiiprzx-czarny-hdr.html" class="equipment">240 Hz Acer XB253Q (2x)</a></li>
+    <div class="container">
+        <h2>Landi's Gaming Setup</h2>
+        <ul class="equipment">
+            <li onclick="alert('Logitech G Pro X Superlight 2')">Mouse: Logitech G Pro X Superlight 2</li>
+            <li onclick="alert('Aqua Control 2')">Mouse Pad: Aqua Control 2</li>
+            <li onclick="alert('Apex 9 Mini')">Keyboard: Apex 9 Mini</li>
+            <li onclick="alert('Wooting UwU RGB Stealth')">Keypad: Wooting UwU RGB Stealth</li>
+            <li onclick="alert('Arctic Nova 3')">Headset: Arctic Nova 3</li>
+            <li onclick="alert('Elgato Wave:3')">Microphone: Elgato Wave:3</li>
+            <li onclick="alert('XP-PEN Star G640')">Graphic Tablet: XP-PEN Star G640</li>
+            <li onclick="alert('Acer XB253Q (240Hz)')">Monitor: Acer XB253Q (240Hz)</li>
         </ul>
-
-        <h3>My PC:</h3>
-        <ul>
-            <li>     <strong>CPU:</strong> <span class="equipment">    Intel Core i5-11400F</span></li>
-            <li>     <strong>GPU:</strong> <span class="equipment">    NVIDIA GeForce RTX 3060</span></li>
-            <li>     <strong>Memory:</strong> <span class="equipment">    DDR4 32 GB</span></li>
-        </ul>
+        <button class="button" onclick="changeColor()">Change Theme</button>
     </div>
-    <footer>Landi's Gaming Equipment</footer>
+
+    <script>
+        function changeColor() {
+            document.body.style.backgroundColor = document.body.style.backgroundColor === '#3b2f2f' ? '#4a3b3b' : '#3b2f2f';
+        }
+    </script>
 </body>
 </html>
