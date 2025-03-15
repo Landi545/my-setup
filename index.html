@@ -68,11 +68,18 @@
                 transform: translateY(0);
             }
         }
+        .glow-effect {
+            animation: glowing 1.5s infinite alternate;
+        }
+        @keyframes glowing {
+            from { text-shadow: 0 0 5px #fff; }
+            to { text-shadow: 0 0 20px #ffccff; }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>Landi's Gaming Setup</h2>
+        <h2 class="glow-effect">Landi's Gaming Setup</h2>
         <ul class="equipment">
             <li onclick="redirectTo('https://amzn.eu/d/4roqWZX')">Mouse: Logitech G Pro X Superlight 2</li>
             <li onclick="redirectTo('https://amzn.eu/d/5lnyNnC')">Mouse Pad: Aqua Control 2</li>
@@ -83,10 +90,19 @@
             <li onclick="redirectTo('https://www.xp-pen.com/product/star-g640.html')">Graphic Tablet: XP-PEN Star G640</li>
             <li onclick="redirectTo('https://www.x-kom.pl/p/553926-monitor-led-24-acer-predator-xb253qgxbmiiprzx-czarny-hdr.html')">Monitor: Acer XB253Q (240Hz)</li>
         </ul>
+        <button class="button" onclick="toggleBackground()">Change Background</button>
+        <button class="button" onclick="playSound()">Play Sound</button>
     </div>
+    <audio id="clickSound" src="https://www.fesliyanstudios.com/play-mp3/4383"></audio>
     <script>
         function redirectTo(url) {
             window.open(url, '_blank');
+        }
+        function toggleBackground() {
+            document.body.style.backgroundColor = document.body.style.backgroundColor === 'black' ? '#3b2f2f' : 'black';
+        }
+        function playSound() {
+            document.getElementById('clickSound').play();
         }
     </script>
 </body>
