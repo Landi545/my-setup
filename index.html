@@ -9,8 +9,8 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #3b2f2f;
-            color: #f4eae0;
+            background: linear-gradient(135deg, #1a1a2e, #3a0d64);
+            color: #f0f0f0;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -18,12 +18,17 @@
             flex-direction: column;
             overflow-x: hidden;
             transition: background 0.5s ease;
+            animation: backgroundMove 10s infinite alternate;
+        }
+        @keyframes backgroundMove {
+            0% { background-position: left top; }
+            100% { background-position: right bottom; }
         }
         .container {
-            background: linear-gradient(135deg, #5c4a4a, #7a5b8c);
+            background: linear-gradient(135deg, #2e2e4f, #6a0dad);
             padding: 20px;
             border-radius: 12px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
             max-width: 600px;
             text-align: center;
             opacity: 0;
@@ -31,7 +36,7 @@
             animation: fadeIn 1s forwards;
         }
         h2 {
-            color: #e0d2c1;
+            color: #d4c2fc;
         }
         .equipment {
             list-style: none;
@@ -39,27 +44,28 @@
         }
         .equipment li {
             padding: 10px;
-            background: #75625a;
+            background: #3b3b70;
             margin: 8px 0;
             border-radius: 8px;
             transition: transform 0.3s ease, background 0.3s ease;
             cursor: pointer;
         }
         .equipment li:hover {
-            background: #8d7467;
+            background: #4a4aad;
             transform: scale(1.05);
         }
         .button {
-            background: #a38f85;
+            background: #5a2ea0;
             border: none;
             padding: 10px 20px;
             font-size: 16px;
             border-radius: 6px;
             cursor: pointer;
             transition: background 0.3s ease, transform 0.3s ease;
+            color: white;
         }
         .button:hover {
-            background: #b39b91;
+            background: #7a3ec8;
             transform: scale(1.1);
         }
         @keyframes fadeIn {
@@ -73,7 +79,7 @@
         }
         @keyframes glowing {
             from { text-shadow: 0 0 5px #fff; }
-            to { text-shadow: 0 0 20px #ffccff; }
+            to { text-shadow: 0 0 20px #d4c2fc; }
         }
     </style>
 </head>
@@ -91,18 +97,13 @@
             <li onclick="redirectTo('https://www.x-kom.pl/p/553926-monitor-led-24-acer-predator-xb253qgxbmiiprzx-czarny-hdr.html')">Monitor: Acer XB253Q (240Hz)</li>
         </ul>
         <button class="button" onclick="toggleBackground()">Change Background</button>
-        <button class="button" onclick="playSound()">Play Sound</button>
     </div>
-    <audio id="clickSound" src="https://www.fesliyanstudios.com/play-mp3/4383"></audio>
     <script>
         function redirectTo(url) {
             window.open(url, '_blank');
         }
         function toggleBackground() {
-            document.body.style.backgroundColor = document.body.style.backgroundColor === 'black' ? '#3b2f2f' : 'black';
-        }
-        function playSound() {
-            document.getElementById('clickSound').play();
+            document.body.style.backgroundColor = document.body.style.backgroundColor === 'black' ? '#1a1a2e' : 'black';
         }
     </script>
 </body>
