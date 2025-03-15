@@ -17,12 +17,12 @@
             height: 100vh;
             flex-direction: column;
             overflow-x: hidden;
-            transition: background 0.5s ease;
-            animation: backgroundMove 10s infinite alternate;
+            animation: animatedBackground 10s infinite alternate linear;
         }
-        @keyframes backgroundMove {
-            0% { background-position: left top; }
-            100% { background-position: right bottom; }
+        @keyframes animatedBackground {
+            0% { background: linear-gradient(135deg, #1a1a2e, #3a0d64); }
+            50% { background: linear-gradient(135deg, #3a0d64, #1a1a2e); }
+            100% { background: linear-gradient(135deg, #1a1a2e, #3a0d64); }
         }
         .container {
             background: linear-gradient(135deg, #2e2e4f, #6a0dad);
@@ -54,20 +54,6 @@
             background: #4a4aad;
             transform: scale(1.05);
         }
-        .button {
-            background: #5a2ea0;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: background 0.3s ease, transform 0.3s ease;
-            color: white;
-        }
-        .button:hover {
-            background: #7a3ec8;
-            transform: scale(1.1);
-        }
         @keyframes fadeIn {
             to {
                 opacity: 1;
@@ -96,14 +82,10 @@
             <li onclick="redirectTo('https://www.xp-pen.com/product/star-g640.html')">Graphic Tablet: XP-PEN Star G640</li>
             <li onclick="redirectTo('https://www.x-kom.pl/p/553926-monitor-led-24-acer-predator-xb253qgxbmiiprzx-czarny-hdr.html')">Monitor: Acer XB253Q (240Hz)</li>
         </ul>
-        <button class="button" onclick="toggleBackground()">Change Background</button>
     </div>
     <script>
         function redirectTo(url) {
             window.open(url, '_blank');
-        }
-        function toggleBackground() {
-            document.body.style.backgroundColor = document.body.style.backgroundColor === 'black' ? '#1a1a2e' : 'black';
         }
     </script>
 </body>
